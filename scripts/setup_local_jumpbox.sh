@@ -20,8 +20,8 @@ fi
 
 # Install ansible and pywinrm
 sudo apt-get install -y pipx
-sudo pipx install pip python3-full
-#sudo pipx ensurepath --force 
+sudo apt install -y pip python3-full
+sudo pipx ensurepath --force 
 sudo pipx upgrade pip 
 
 cd $GOAD_REPO
