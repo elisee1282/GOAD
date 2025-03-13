@@ -2,7 +2,7 @@
 
 # Install git and python3
 sudo apt-get update
-sudo apt-get install -y git python3-venv python3-pip git
+sudo apt-get install -y git git
 
 # git clone goad
 GOAD_REPO=/home/vagrant/GOAD
@@ -10,7 +10,7 @@ GIT_FOLDER=$LOCALREPO/.git
 if [ ! -d $GIT_FOLDER ]
 then
     rm -rf $GOAD_REPO
-    git clone https://github.com/Orange-Cyberdefense/GOAD.git $GOAD_REPO
+    git clone https://github.com/elisee1282/GOAD.git $GOAD_REPO
     cd $GOAD_REPO
     # git checkout -b v3-beta origin/v3-beta
 else
@@ -19,12 +19,17 @@ else
 fi
 
 # Install ansible and pywinrm
-python3 -m pip install --upgrade pip
+sudo apt-get install -y pipx
+sudo pipx install pip python3-full
+sudo pipx ensurepath --force 
+#sudo pipx upgrade pip 
+
 cd $GOAD_REPO
-python3 -m pip install -r requirements.yml
+
+pip install -r requirements.yml
 
 cd $GOAD_REPO/ansible
-/home/vagrant/.local/bin/ansible-galaxy install -r requirements.yml
+ansible-galaxy install -r requirements.yml
 
 # set color
 sudo sed -i '/force_color_prompt=yes/s/^#//g' /home/*/.bashrc
