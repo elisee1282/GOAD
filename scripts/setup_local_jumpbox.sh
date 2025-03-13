@@ -20,7 +20,7 @@ fi
 
 # Install ansible and pywinrm
 sudo apt-get install -y pipx
-sudo apt install -y pip python3-full
+#sudo apt install -y pip python3-full
 sudo pipx ensurepath --force 
 sudo pipx upgrade pip 
 
