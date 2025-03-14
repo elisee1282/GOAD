@@ -5,7 +5,7 @@ pyyaml
 # Ansible
 ansible_runner
 # ansible-core 2.12.6 min version python 3.8
-ansible-core==2.12.6
+ansible-core==2.18.3
 pywinrm
 # AZURE
 azure-identity
