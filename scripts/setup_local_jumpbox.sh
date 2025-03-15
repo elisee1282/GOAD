@@ -4,7 +4,7 @@
 sudo apt-get update
 sudo apt-get install -y git python3-venv python3-pip git
 python3 -m venv /home/vagrant/.local/
-sudo apt autoremove
+sudo apt -y autoremove
 
 
 # git clone goad
