@@ -3,7 +3,7 @@
 # Install git and python3
 sudo apt-get update
 sudo apt-get install -y git python3-venv python3-pip git
-python3 -m venv /home/vagrant/.local/bin/
+python3 -m venv /home/vagrant/.local/
 
 
 # git clone goad
@@ -31,12 +31,12 @@ fi
 #sudo pipx upgrade pip 
 
 cd $GOAD_REPO
-/home/vagrant/.local/bin/bin/python3 -m pip install --upgrade pip
-/home/vagrant/.local/bin/bin/python3 -m pip install -r requirements.yml
+/home/vagrant/.local/bin/python3 -m pip install --upgrade pip
+/home/vagrant/.local/bin/python3 -m pip install -r requirements.yml
 
 
 cd $GOAD_REPO/ansible
-/home/vagrant/.local/bin/bin/ansible-galaxy install -r requirements.yml
+/home/vagrant/.local/bin/ansible-galaxy install -r requirements.yml
 
 # set color
 sudo sed -i '/force_color_prompt=yes/s/^#//g' /home/*/.bashrc
