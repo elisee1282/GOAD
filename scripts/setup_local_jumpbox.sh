@@ -31,8 +31,8 @@ fi
 #sudo pipx upgrade pip 
 
 cd $GOAD_REPO
-/home/vagrant/.local/bin/python3 -m pip install --upgrade pip
-/home/vagrant/.local/bin/python3 -m pip install -r requirements.yml
+/home/vagrant/.local/bin/bin/python3 -m pip install --upgrade pip
+/home/vagrant/.local/bin/bin/python3 -m pip install -r requirements.yml
 
 
 cd $GOAD_REPO/ansible
